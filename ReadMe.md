@@ -2,9 +2,11 @@
 
 ### Description
 
-The idea behind RepoCleaner is to help organizations get an idea of GitHub private repositories that have not been used (had a commit) in a set interval set by the user (i.e which GitHub repositories have not had a commit in the last 12 months). The push towards EaC (Everything as Code) or IaC (Infrastructure as Code) has placed emphasis on ensuring an organizations actively commited repos (which should contain most everything in code) are only listed within GitHub for view (especially for on-boarding of new employees). 
+The idea behind RepoCleaner is to help organizations get an idea of GitHub private repositories that have not been used (had a commit) in a set interval set by the user (i.e which GitHub repositories have not had a commit in the last 12 months). 
 
-Currently the CLI program lists the repos matching the criteria and the last commit for each; and allows saving to a CSV file for someone later to archive manually within GitHub. 
+The push towards EaC (Everything as Code) or IaC (Infrastructure as Code) has placed emphasis on ensuring an organizations actively commited repos (which should contain most everything in code) are only listed within GitHub for view (especially for on-boarding of new employees). 
+
+Currently the CLI program lists the repos matching the criteria and the last commit for each; and saves to a CSV file for someone later to archive manually within GitHub. 
 
 Future state work will be to auto-archive these repos in the GitHub org upon user confirmation from the CLI; however important to verify these repositories are actually not in use before confirmation--primary reason this part is not built as of yet. 
 
@@ -58,6 +60,12 @@ This creates a executable binary in the project root called `repo-clean` and to 
 
 *The current project already has this binary created; make sure enviroment variables are set and execute the command above to run the binary.* 
 
+
+
+#### CSV file
+
+The CSV file of the repopositories and the last push date after the time of the internal (number of months) specified in the enviromental variable will be in the root directory called `expired_repos.csv`
+
 ### Troubleshooting
 
 If you get an error with failing to create csv file, make sure your project area is writable
@@ -75,4 +83,10 @@ This error basically means you did not set your enviromental variables and they 
 ### Deveopment Notes
 
 This is my first Go program and recently learned the language. My past development background has been in Ruby, Python, TypeScript/JavaScript, PHP etc. I know I could have create a more modular project with separate functions outside the main() as well as separate files/packages etc. 
+
+
+
+### Credits
+
+Much of this program utilizes the API methods from this [repo](https://github.com/google/go-github)
 
