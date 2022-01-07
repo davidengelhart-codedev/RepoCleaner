@@ -6,9 +6,9 @@ The idea behind RepoCleaner is to help organizations get an idea of GitHub priva
 
 The push towards EaC (Everything as Code) or IaC (Infrastructure as Code) has placed emphasis on ensuring an organizations actively commited repos (which should contain most everything in code) are only listed within GitHub for view (especially for on-boarding of new employees). 
 
-Currently the CLI program lists the repos matching the criteria and the last commit for each; and saves to a CSV file for someone later to archive manually within GitHub. 
+Currently the CLI program lists the private repos matching the organization and the last commit for each longer than the month interval specified; and saves to a CSV file for someone later to archive repos manually within GitHub--the manual process is not ideal but gives the company information to decide if the repos are being used or should be archived and read-only. 
 
-Future state work will be to auto-archive these repos in the GitHub org upon user confirmation from the CLI; however important to verify these repositories are actually not in use before confirmation--primary reason this part is not built as of yet. 
+Future state work will be to auto-archive these repos in the GitHub org upon user confirmation 'y' or 'n' from the CLI; however it is important to verify these repositories are actually not in use before archiving and making read-only--primary reason this part is not built out as of yet. 
 
 ### Enviromental Variables to Set
 
