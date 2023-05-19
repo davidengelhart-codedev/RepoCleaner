@@ -80,10 +80,6 @@ This error basically means you did not set your enviromental variables and they 
 
 
 
-### Deveopment Notes
-
-This is my first Go program and am still learning the language. My past development background has been in Ruby, Python, TypeScript/JavaScript, PHP etc. I know I could have created a more modular project with separate functions outside the main() as well as separate files/packages etc. 
-
 
 
 ### Credits
